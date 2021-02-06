@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\Post::factory(3)->create(['category' => 'Laravel Orion']);
+        \App\Models\Post::factory(3)->create(['category' => 'Laravel Tips']);
+        \App\Models\Post::factory(3)->create(['category' => 'Vue Tips']);
+        \App\Models\Post::factory(3)->create(['category' => 'Coding Architecture']);
+        \App\Models\Post::factory(3)->create(['category' => 'Coding In The Mind']);
     }
 }
