@@ -21,5 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['as' => 'api.'], function () {
-    Orion::resource('posts', PostsController::class);
+    Orion::resource('posts', PostsController::class)->withSoftDeletes();
 });
