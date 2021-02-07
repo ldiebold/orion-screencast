@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Post;
+use Orion\Concerns\DisablePagination;
 use Orion\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
+    use DisablePagination;
+
     protected $model = Post::class;
 
     protected function searchableBy(): array
