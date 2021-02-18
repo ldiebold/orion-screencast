@@ -33,4 +33,14 @@ class Post extends Model
     {
         return $query->where('category', $category);
     }
+
+    /**
+     * A post belongs to a user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
